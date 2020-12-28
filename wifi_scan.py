@@ -56,6 +56,7 @@ class Application(MDApp):
 
     def start_scan(self):
 
+        self.register_broadcats_receiver()
         context = mActivity.getApplicationContext()
         wifiManager = cast(
             WifiManager, context.getSystemService(Context.WIFI_SERVICE))
